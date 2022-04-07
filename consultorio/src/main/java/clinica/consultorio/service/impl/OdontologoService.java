@@ -65,6 +65,12 @@ public class OdontologoService implements IOdontologoService {
         return odontologoDTOS_list;
     }
 
+    @Override
+    public OdontologoDTO getOdontologoByName(String name) {
+        Odontologo odontologo = odontologoRepository.findOdontologoByNombre(name);
+        return mapDTO(odontologo);
+    }
+
     //------ MAPPER -----
     private OdontologoDTO mapDTO(Odontologo odontologo){
         OdontologoDTO odontologoDTO = modelMapper.map(odontologo,OdontologoDTO.class);
@@ -77,6 +83,7 @@ public class OdontologoService implements IOdontologoService {
 
         return odontologo;
     }
+
 
 
 }
