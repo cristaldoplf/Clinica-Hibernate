@@ -27,6 +27,12 @@ public class DomicilioController {
         return new ResponseEntity<>(newDomicilioDTO,HttpStatus.OK);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteById(@PathVariable("id") Integer id){
+        domicilioService.deleteById(id);
+        return new ResponseEntity<>("Domicilio Eliminado",HttpStatus.OK);
+    }
+
 
 
 

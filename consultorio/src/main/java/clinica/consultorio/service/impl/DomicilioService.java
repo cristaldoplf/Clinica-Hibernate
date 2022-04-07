@@ -37,7 +37,7 @@ public class DomicilioService implements IDomicilioService {
         //save devuelve lo que creo, por eso lo guardamos y lo mapeamos, es la devolucion
         //del save, no el mismo objeto que entra por parametro.
         Domicilio newDomicilio = domicilioRepository.save(domicilio);
-        return mapToDTO(domicilio);
+        return mapToDTO(newDomicilio);
     }
 
     @Override
