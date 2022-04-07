@@ -14,24 +14,24 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "Domicilios")
-public class Domicilio {
+public class Adress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    private String calle;
-    private String numero;
-    private String localidad;
-    private String provincia;
+    private String street;
+    private String adressNumber;
+    private String town;
+    private String province;
 
     @Override
     public String toString() {
-        return "Domicilio{" +
+        return "Adress{" +
                 "id=" + id +
-                ", calle='" + calle + '\'' +
-                ", numero='" + numero + '\'' +
-                ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' +
+                ", street='" + street + '\'' +
+                ", adressNumber='" + adressNumber + '\'' +
+                ", town='" + town + '\'' +
+                ", province='" + province + '\'' +
                 '}';
     }
 
@@ -39,8 +39,8 @@ public class Domicilio {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Domicilio domicilio = (Domicilio) o;
-        return Objects.equals(id, domicilio.id);
+        Adress adress = (Adress) o;
+        return Objects.equals(id, adress.id);
     }
 
     @Override

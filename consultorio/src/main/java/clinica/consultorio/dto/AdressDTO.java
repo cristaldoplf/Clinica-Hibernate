@@ -11,11 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class DomicilioDTO {
+public class AdressDTO {
 
     private Integer id;
-    private String calle;
-    private String numero;
-    private String localidad;
-    private String provincia;
+    private String street;
+    private String adressNumber;
+    private String town;
+    private String province;
 }
