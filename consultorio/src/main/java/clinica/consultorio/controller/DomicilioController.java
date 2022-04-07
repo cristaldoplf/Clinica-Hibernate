@@ -52,8 +52,8 @@ public class DomicilioController {
 
     @GetMapping("/list")
     public ResponseEntity<List<DomicilioDTO>> findAll() {
-        List<DomicilioDTO> domicilio_list = domicilioService.findAll();
-        return new ResponseEntity<>(domicilio_list, HttpStatus.OK);
+        List<DomicilioDTO> domicilioDTO_list = domicilioService.findAll();
+        return new ResponseEntity<>(domicilioDTO_list, HttpStatus.OK);
     }
 
 

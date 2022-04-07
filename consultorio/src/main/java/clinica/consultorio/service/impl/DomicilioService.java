@@ -63,7 +63,7 @@ public class DomicilioService implements IDomicilioService {
     public List<DomicilioDTO> findAll() {
         List<Domicilio> domicilio_list = domicilioRepository.findAll();
         List<DomicilioDTO> domicilioDTO_list = domicilio_list.stream().map(dom -> mapToDTO(dom)).collect(Collectors.toList());
-        return null;
+        return domicilioDTO_list;
     }
 
     //------ MAPPER -----
