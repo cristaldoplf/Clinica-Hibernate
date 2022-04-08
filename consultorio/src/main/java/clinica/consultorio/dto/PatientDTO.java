@@ -1,5 +1,6 @@
 package clinica.consultorio.dto;
 
+import clinica.consultorio.entidades.Adress;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,5 @@ public class PatientDTO {
     private String email;
     private int dni;
     private LocalDate admissionDate;
+    private Adress adress;
 }
