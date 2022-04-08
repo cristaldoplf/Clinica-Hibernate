@@ -26,4 +26,10 @@ public class PatientController {
         PatientDTO newPatientDTO =  patientService.create(patientDTO);
         return new ResponseEntity<>(newPatientDTO, HttpStatus.OK);
     }
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<String> deleteById(@PathVariable("id") Integer id){
+        patientService.deleteById(id);
+        return new ResponseEntity<>("Patient eliminado",HttpStatus.OK);
+    }
 }
