@@ -13,27 +13,25 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
-@Table(name = "odontologos")
-public class Odontologo {
+@Table(name = "dentists")
+public class Dentist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
-    private String nombre;
-
-    private String apellido;
-
-    private String matricula;
+    private String name;
+    private String lastName;
+    private String licenceNumber;
 
 
     @Override
     public String toString() {
-        return "Odontologo{" +
+        return "Dentist{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", matricula='" + matricula + '\'' +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", licenceNumber='" + licenceNumber + '\'' +
                 '}';
     }
 
@@ -41,7 +39,7 @@ public class Odontologo {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Odontologo that = (Odontologo) o;
+        Dentist that = (Dentist) o;
         return Objects.equals(id, that.id);
     }
 
