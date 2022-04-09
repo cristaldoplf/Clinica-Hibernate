@@ -62,6 +62,12 @@ public class PatientService implements IPatientService {
         return mapToDTO(patient);
     }
 
+    @Override
+    public PatientDTO getPatientByName(String name) {
+        Patient patient = patientRepository.findPatientByName(name);
+        return mapToDTO(patient);
+    }
+
     //------ MAPPER -----
     private PatientDTO mapToDTO(Patient patient){
         PatientDTO patientDTO = modelMapper.map(patient, PatientDTO.class);

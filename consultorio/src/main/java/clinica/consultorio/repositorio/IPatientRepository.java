@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IPatientRepository extends JpaRepository<Patient,Integer> {
 
+    public Patient findPatientByName(String name);
     public Patient findPatientByEmail(String email);
     //find+NombreClase+By+NombreAtributo
     //hay un ejemplo de otra forma de armarlo en IDentistRepository por si este no funciona.
