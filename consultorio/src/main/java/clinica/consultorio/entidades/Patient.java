@@ -26,7 +26,7 @@ public class Patient {
     private int dni;
     private LocalDate admissionDate;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER ,cascade = CascadeType.ALL)
     @JoinColumn(name = "id_adress", referencedColumnName = "id")
     private Adress adress;
 

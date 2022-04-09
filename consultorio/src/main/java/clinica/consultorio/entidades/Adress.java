@@ -1,9 +1,6 @@
 package clinica.consultorio.entidades;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -12,6 +9,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Getter
 @Setter
+@Data
 @Entity
 @Table(name = "addresses")
 public class Adress {

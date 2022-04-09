@@ -36,8 +36,6 @@ public class AdressService implements IAdressService {
         //save devuelve lo que creo, por eso lo guardamos y lo mapeamos, es la devolucion
         //del save, no el mismo objeto que entra por parametro.
         Adress newAdress = adressRepository.save(adress);
-        System.out.println("######################################################");
-        System.out.println(newAdress.getId());
         return mapToDTO(newAdress);
     }
 
