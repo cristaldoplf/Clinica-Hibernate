@@ -27,6 +27,7 @@ public class Dentist {
     private String licenceNumber;
 
 
+
     @Override
     public String toString() {
         return "Dentist{" +

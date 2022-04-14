@@ -51,10 +51,8 @@ public class AppointmentController {
         if(appointmentService.findById(newApoointmentDTO.getId()) == null){
             throw new ServerException("Patient no encontrado");
         }else{
-            //id del dentista buscando por nombre
+            //busco los ID por los parametros que entran en el endpoint.
             newApoointmentDTO.setId_dentist(dentistService.getOdontologoByName(nameDentist).getId());
-
-            //id del paciente buscando por nombre
             newApoointmentDTO.setId_patient(patientService.getPatientByName(namePatient).getId());
 
             //update

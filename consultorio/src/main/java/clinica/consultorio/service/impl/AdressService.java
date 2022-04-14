@@ -4,6 +4,7 @@ import clinica.consultorio.dto.AdressDTO;
 import clinica.consultorio.entidades.Adress;
 import clinica.consultorio.repositorio.IAdressRepository;
 import clinica.consultorio.service.IAdressService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.istack.NotNull;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class AdressService implements IAdressService {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    ObjectMapper objectMapper;
 
     @Override
     public AdressDTO findById(@NotNull Integer id) {
@@ -75,6 +79,8 @@ public class AdressService implements IAdressService {
 
         return adress;
     }
+
+
 }
 
 

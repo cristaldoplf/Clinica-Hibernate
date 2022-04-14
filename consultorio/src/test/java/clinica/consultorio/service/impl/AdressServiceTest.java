@@ -10,19 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class AdressServiceTest {
+
     @Autowired
     IAdressService adressService;
-
-//    private String street;
-//    private String adressNumber;
-//    private String town;
-//    private String province;
 
     @Test
     public void createAdressTest() {
         AdressDTO adressDTO = new AdressDTO();
-        adressDTO.setStreet("Del Potro");
-        adressDTO.setAdressNumber("La Torre");
+        adressDTO.setStreet("calle test");
+        adressDTO.setAdressNumber("132132");
         adressDTO.setTown("Tandil");
         adressDTO.setProvince("Buenos Aires");
 
@@ -30,28 +26,29 @@ class AdressServiceTest {
         AdressDTO newAdressDTO = adressService.create(adressDTO);
 
         assertNotNull(newAdressDTO);
+//        assertNotNull(adressService.findById(1));
 
     }
 
-    @Test
-    public void findAdressTest() {
-        assertNotNull(adressService.findById(1));
-    }
-
-    @Test
-    public void updateAdressTest() {
-
-    }
-
-    @Test
-    public void deleteAdressTest() {
-
-    }
-
-    @Test
-    public void findAllAdressTest() {
-
-    }
+//    @Test
+//    public void findAdressTest() {
+//
+//    }
+//
+//    @Test
+//    public void updateAdressTest() {
+//
+//    }
+//
+//    @Test
+//    public void deleteAdressTest() {
+//
+//    }
+//
+//    @Test
+//    public void findAllAdressTest() {
+//
+//    }
 
 
 }
